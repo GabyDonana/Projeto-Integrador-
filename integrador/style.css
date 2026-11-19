@@ -1,0 +1,183 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f0;
+    color: #333;
+}
+
+
+header {
+    background-color: #405d4b;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c2deeb;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #557765;
+}
+
+
+.inicio {
+    background-color: #dce9df;
+    padding: 100px 30px;
+    text-align: center;
+    margin: 200px;
+}
+
+.inicio h2 {
+    color: #405d4b;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.botao {
+    background-color: #557765;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.botao:hover {
+    background-color: #405d4b;
+}
+
+
+.sobre {
+    background-color: white;
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.sobre h2 {
+    color: #557765;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    margin: 170px;
+    font-size: 19px;
+}
+
+
+.servicos {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #f0f0e8;
+}
+
+.servicos h2 {
+    color: #557765;
+    margin-bottom: 20px;
+}
+
+.servicos > p {
+    margin-bottom: 25px;
+}
+
+.caixa {
+    background-color: white;
+    padding: 25px;
+    margin: 15px auto;
+    width: 250px;
+    border-radius: 15px;
+}
+
+.caixa h3 {
+    color: #557765;
+    margin-bottom: 15px;
+}
+
+.caixa p {
+    color: #555;
+}
+
+
+.frase {
+    background-color: #557765;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #557765;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+.frase h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.frase p {
+    font-size: 18px;
+    color: #e4eee5;
+}
+
+.contato {
+    background-color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    color: #557765;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    margin: 15px;
+}
+
+
+footer {
+    background-color: #354b3e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .inicio h2 {
+        font-size: 28px;
+    }
+
+    .caixa {
+        width: 80%;
+    }
+
+}
+
