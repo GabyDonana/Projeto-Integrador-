@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --ink: #18343a;
+    --muted: #5d7478;
+    --paper: #f6f1e7;
+    --surface: #fffdf8;
+    --blue: #2b6f77;
+    --blue-dark: #1d555c;
+    --line: #d7dedb;
+    --shadow: 0 12px 32px rgba(24, 52, 58, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 85% 8%, rgba(109, 171, 178, 0.16), transparent 24rem),
+        linear-gradient(135deg, #f8f5ec 0%, var(--paper) 100%);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid rgba(24, 52, 58, 0.08);
+    background: rgba(246, 241, 231, 0.92);
+    backdrop-filter: blur(14px);
+}
+
+.sitetittle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1180px, calc(100% - 3rem));
+    min-height: 76px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.mastertittle {
+    margin: 0;
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    letter-spacing: -0.02em;
+}
+
+.topnav {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.topnav a {
+    padding: 0.65rem 0.8rem;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.topnav a:hover,
+.topnav a:focus-visible {
+    color: var(--blue-dark);
+    background: rgba(43, 111, 119, 0.1);
+    transform: translateY(-1px);
+}
+
+.topnav a:focus-visible,
+.shipwreckbox a:focus-visible,
+.footer-links a:focus-visible {
+    outline: 3px solid rgba(43, 111, 119, 0.28);
+    outline-offset: 3px;
+}
+
+main {
+    width: min(1180px, calc(100% - 3rem));
+    margin: 0 auto;
+    padding: 3.5rem 0 5rem;
+}
+
+.informativetxt {
+    max-width: 920px;
+    margin: 0 auto 4.5rem;
+    text-align: center;
+}
+
+.tittle {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.55rem, 3.4vw, 2.65rem);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+}
+
+.mainshipwreckbox,
+.abandonedplaces {
+    scroll-margin-top: 100px;
+}
+
+.mainshipwreckbox {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.mainshipwreckbox > h3 {
+    grid-column: 1 / -1;
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--blue-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+    text-transform: lowercase;
+}
+
+.shipwreckbox {
+    position: relative;
+    min-height: 155px;
+    overflow: hidden;
+    padding: 1.35rem 1.5rem;
+    border: 1px solid rgba(24, 52, 58, 0.09);
+    border-radius: 18px;
+    background: rgba(255, 253, 248, 0.88);
+    box-shadow: var(--shadow);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.shipwreckbox::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background: var(--blue);
+    content: "";
+}
+
+.shipwreckbox:hover {
+    border-color: rgba(43, 111, 119, 0.28);
+    box-shadow: 0 18px 38px rgba(24, 52, 58, 0.13);
+    transform: translateY(-4px);
+}
+
+.shipwreckbox h2,
+.shipwreckbox h4 {
+    margin: 0;
+}
+
+.shipwreckbox h2 {
+    margin-bottom: 0.65rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.28rem;
+    line-height: 1.25;
+}
+
+.shipwreckbox h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.shipwreckbox h2 a:hover {
+    color: var(--blue);
+}
+
+.shipwreckbox h4 {
+    color: var(--muted);
+    font-size: 0.91rem;
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+main > hr {
+    height: 1px;
+    margin: 4.5rem 0 3.5rem;
+    border: 0;
+    background: var(--line);
+}
+
+.abandonedplaces {
+    color: var(--blue-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+    font-weight: 700;
+}
+
+.abandonedbox {
+    margin-top: 1.25rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(24, 52, 58, 0.09);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.abandonedbox h2,
+.abandonedbox h4 {
+    margin: 0;
+}
+
+.abandonedbox h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    padding: 1rem max(1.5rem, calc((100% - 1180px) / 2));
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    background: rgba(255, 253, 248, 0.9);
+    font-size: 0.86rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footer-links a {
+    color: var(--muted);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--blue);
+}
+
+@media (max-width: 800px) {
+    .sitetittle,
+    main {
+        width: min(100% - 2rem, 1180px);
+    }
+
+    .sitetittle {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 112px;
+        padding: 0.75rem 0;
+        gap: 0.35rem;
+    }
+
+    .topnav {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.25rem;
+    }
+
+    .topnav a {
+        flex: 0 0 auto;
+        padding-inline: 0.65rem;
+    }
+
+    main {
+        padding-top: 2.5rem;
+    }
+
+    .informativetxt {
+        margin-bottom: 3rem;
+    }
+
+    .mainshipwreckbox {
+        grid-template-columns: 1fr;
+    }
+
+    .mainshipwreckbox > h3 {
+        grid-column: 1;
+    }
+
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.55rem;
+        padding-block: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topnav a {
+        font-size: 0.78rem;
+    }
+
+    .shipwreckbox {
+        min-height: 0;
+        padding: 1.15rem 1.25rem 1.15rem 1.35rem;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .topnav a,
+    .shipwreckbox {
+        transition: none;
+    }
+}
